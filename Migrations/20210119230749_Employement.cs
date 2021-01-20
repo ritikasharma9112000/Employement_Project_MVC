@@ -106,7 +106,6 @@ namespace Employement_Project_MVC.Migrations
                 column: "Employer_DetailId");
 
             var sqlFile = Path.Combine(".\\DatabaseScript", @"data.sql");
-
             migrationBuilder.Sql(File.ReadAllText(sqlFile));
         }
 

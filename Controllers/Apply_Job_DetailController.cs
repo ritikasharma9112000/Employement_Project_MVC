@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Employement_Project_MVC.Data;
 using Employement_Project_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Employement_Project_MVC.Controllers
 {
+    [Authorize]
     public class Apply_Job_DetailController : Controller
     {
         private readonly Employement_Project_MVCContext _context;
@@ -18,7 +20,7 @@ namespace Employement_Project_MVC.Controllers
         {
             _context = context;
         }
-
+       
         // GET: Apply_Job_Detail
         public async Task<IActionResult> Index()
         {

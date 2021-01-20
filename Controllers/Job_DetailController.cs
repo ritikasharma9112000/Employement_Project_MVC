@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Employement_Project_MVC.Data;
 using Employement_Project_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Employement_Project_MVC.Controllers
 {
@@ -44,7 +45,7 @@ namespace Employement_Project_MVC.Controllers
 
             return View(job_Detail);
         }
-
+        [Authorize]
         // GET: Job_Detail/Create
         public IActionResult Create()
         {
@@ -68,7 +69,7 @@ namespace Employement_Project_MVC.Controllers
             ViewData["Employer_DetailId"] = new SelectList(_context.Employer_Detail, "Id", "Id", job_Detail.Employer_DetailId);
             return View(job_Detail);
         }
-
+        [Authorize]
         // GET: Job_Detail/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -121,7 +122,7 @@ namespace Employement_Project_MVC.Controllers
             ViewData["Employer_DetailId"] = new SelectList(_context.Employer_Detail, "Id", "Id", job_Detail.Employer_DetailId);
             return View(job_Detail);
         }
-
+        [Authorize]
         // GET: Job_Detail/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
