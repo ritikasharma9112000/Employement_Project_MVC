@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employement_Project_MVC.Models
 {
+    //This class display the candidate details under which it has candidate id, name of candidate, DOB of candidate, mobile no of candidate, email address of candidate
     public class Candidate_Detail
     {
         public int Id { get; set; }

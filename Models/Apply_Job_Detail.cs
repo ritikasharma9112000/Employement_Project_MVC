@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employement_Project_MVC.Models
 {
+    //This class display the apply job details under which it has apply job id, candidate id, job id, candidate availabilities, candidate notice period
     public class Apply_Job_Detail
     {
         public int Id { get; set; }
